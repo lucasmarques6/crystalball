@@ -14,9 +14,9 @@
       "primary": "#00000e",
       "secondary": "#7C2CA3"
     },
-    "font": {
-      "url": "https://fonts.adobe.com/fonts/coolvetica#fonts-section",
-      "family": ""
+     "font": {
+      "url": "https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap",
+      "family": "Roboto"
     },
     "legend": {
       "isVisible": true

@@ -6,15 +6,17 @@
       "pt": "Wewac"
     },
     "tagline": "",
-    "projectWebsite": "https://www.wewac.co/en",
+
+    "projectWebsite": "https://www.wewac.co",
+
     "defaultLanguage": "es",
     "color": {
       "primary": "#00000e",
       "secondary": "#7C2CA3"
     },
-    "font": {
-      "url": "https://fonts.adobe.com/fonts/coolvetica#fonts-section",
-      "family": ""
+     "font": {
+      "url": "https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap",
+      "family": "Roboto"
     },
     "legend": {
       "isVisible": true
@@ -81,37 +83,7 @@
           "hoverBackgroundColor": "#000000"
         }
       },
-      {
-        "type": "VECTOR",
-        "name": "puntos_wewac",
-        "url": "./geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typename=workspace1:puntos_wewac&outputFormat=application/json&srsname=EPSG:3857",
-        "group": "media",
-        "queryable": true,
-        "format": "GeoJSON",
-        "legendDisplayName": {
-          "en": "Points Wewac",
-          "es": "Puntos Wewac",
-          "pt": "Pontos Wewac"
-        },
-        "visible": true,
-        "displayInLegend": true,
-        "displaySidebarInfo": true,
-        "zIndex": 1000,
-        "minResolution": 0,
-        "maxResolution": 64000,
-        "label": true,
-        "hoverable": true,
-        "legendIcon": "",
-        "style": {
-          "type": "circle",
-          "radius": 5,
-          "strokeWidth": 1,
-          "strokeColor": "#000000",
-          "fillColor": "red",
-          "hoverTextColor": "white",
-          "hoverBackgroundColor": "#000000"
-        }
-      },
+     
       {
         "type": "VECTOR",
         "name": "lines",
@@ -256,6 +228,23 @@
           "hoverTextColor": "white",
           "hoverBackgroundColor": "#000000"
         }
+      },
+      {
+        "type": "XYZ",
+        "name": "Mapbox_Streets",
+        "group": "media",
+        "url": "https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/{z}/{x}/{y}?access_token=sk.eyJ1IjoibHVjYXMtbSIsImEiOiJjbWJzM2tzdWowZTZuMmxwdTl2enJyYmdyIn0.qnB3m2LPzuQACaMsr2DXRw",
+        "minResolution": 0.25,
+        "maxResolution": 64000,
+        "queryable": false,
+        "displayInLegend": true,
+        "legendIcon": "https://cdn-icons-png.flaticon.com/512/854/854878.png",
+        "legendDisplayName": {
+          "en": "Mapbox",
+          "es": "Mapbox",
+          "pt": "Mapbox"
+        },
+        "visible": true
       },
       
       {
@@ -486,18 +475,11 @@
       "media": {
         "default": {
           "layers": [
-            "Esri_standard",
-            "mississippi",
-            "redatto2",
-            "polygons",
+           "Mapbox_Streets",
             "ESRI-World-Imagery2",
-            "wateruse",
             "points",
-            "lines",
             "videos",
-            "photos",
-            "puntos_wewac",
-            "areas_protegidas"
+            "photos"
           ],
           "center": [-72.90, 7.286],
           "resolution": 32,

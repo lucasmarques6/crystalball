@@ -57,6 +57,8 @@ axios
 // App Configuration
 // eslint-disable-next-line no-undef
 fetch('./static/app-conf.json')
+//fetch(`./static/app-conf.json?ts=${Date.now()}`)
+
   // fetch('https://crystalball-mapkit.s3.us-east-2.amazonaws.com/assets/settings/app-conf.json')
   .then(response => {
     if (response.status !== 200) {
